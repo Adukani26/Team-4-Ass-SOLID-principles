@@ -9,5 +9,6 @@ public class Main {
         
         service.sendNotification(email, "Hello via Email!");
         service.sendNotification(sms, "Hello via SMS!");
+        service.sendNotification(push, "New update available!");
     }
 }
