@@ -1,5 +1,3 @@
- Violate 2
-
 class Book {
     public int getPageCount() { return 200; }
 }
