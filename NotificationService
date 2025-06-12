@@ -1,0 +1,20 @@
+//Violation of OCP
+
+class NotificationService {
+    public void sendNotification(String type, String message) {
+        if (type.equals("Email")) {
+            System.out.println("Sending Email: " + message);
+        } else if (type.equals("SMS")) {
+            System.out.println("Sending SMS: " + message);
+        }
+        // Problem: Adding a new type (e.g., "Push") requires modifying this method!
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        NotificationService notifier = new NotificationService();
+        notifier.sendNotification("Email", "Hello via Email!");
+        notifier.sendNotification("SMS", "Hello via SMS!");
+    }
+}
