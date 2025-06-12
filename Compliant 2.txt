@@ -1,0 +1,19 @@
+Compliant 2
+
+interface Readable {
+    String getContent();
+}
+
+interface PhysicalBook {
+    int getPageCount();
+}
+
+class PrintedBook implements Readable, PhysicalBook {
+    public String getContent() { return "Printed text"; }
+    public int getPageCount() { return 200; }
+}
+
+class AudioBook implements Readable {
+    public String getContent() { return "Audio narration"; }
+    // No getPageCount() - correct!
+}
