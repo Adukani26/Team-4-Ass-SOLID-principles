@@ -1,0 +1,12 @@
+ Violate 2
+
+class Book {
+    public int getPageCount() { return 200; }
+}
+
+class AudioBook extends Book {
+    @Override
+    public int getPageCount() {
+        throw new UnsupportedOperationException("AudioBook has no pages!"); // ❌ Violation
+    }
+}
