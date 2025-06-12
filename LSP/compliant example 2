@@ -1,5 +1,3 @@
-Compliant 2
-
 interface Readable {
     String getContent();
 }
